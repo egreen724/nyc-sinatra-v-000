@@ -49,8 +49,9 @@ class LandmarksController < ApplicationController
     #   end
     
     # @landmark.figure_id = figure.id 
-    # @landmark.save 
-    binding.pry 
+    # @landmark.save
+    
+  
     @landmark = Landmark.find(params[:id])
     @landmark.name = params['landmark']['name']
     @landmark.year_completed = params['landmark']['year_completed']
