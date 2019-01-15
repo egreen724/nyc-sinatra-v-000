@@ -38,20 +38,6 @@ class LandmarksController < ApplicationController
   
   post '/landmarks/:id' do 
   
-    # @landmark = Landmark.find(params[:id])
-    
-    # @landmark.update(params[:landmark])
-    
-    # if !params["figure"]["name"].empty?
-    #     figure = Figure.create(params[:figure])
-    #   else 
-    #     figure = Figure.find_by_id(params["landmark"]["figure_id"])
-    #   end
-    
-    # @landmark.figure_id = figure.id 
-    # @landmark.save
-    binding.pry 
-  
     @landmark = Landmark.find(params[:id])
     @landmark.name = params['landmark']['name']
     @landmark.year_completed = params['landmark']['year_completed'].to_s
