@@ -36,7 +36,7 @@ class LandmarksController < ApplicationController
   end
 
   
-  patch '/landmarks/:id' do 
+  post '/landmarks/:id' do 
   
     # @landmark = Landmark.find(params[:id])
     
