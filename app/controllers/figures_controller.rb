@@ -66,6 +66,10 @@ class FiguresController < ApplicationController
     
     if !params["landmark"]["name"].empty?
       landmark = Landmark.create(:name => params[:landmark][:name])
+      
+      if !params[:landmark][:year_completed].empty?
+        landmark.year_completed = params[:landmark][:year_completed]
+      
       @figure.landmarks << landmark 
     end
      
