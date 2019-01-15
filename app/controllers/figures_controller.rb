@@ -57,7 +57,7 @@ class FiguresController < ApplicationController
     @figure = Figure.find(params[:id])
     
     @figure.update(params["figure"])
-    
+    binding.pry
     if !params[:title][:name].empty?
       title = Title.create(params[:title])
       @figure.titles << title 
@@ -81,7 +81,7 @@ class FiguresController < ApplicationController
       landmark = Landmark.create(params[:landmark])
       @figure.landmarks << landmark 
     end
-    binding.pry 
+     
     @figure.save 
     redirect "/figures/#{@figure.id}" 
      
