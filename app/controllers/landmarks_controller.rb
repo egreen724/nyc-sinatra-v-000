@@ -50,7 +50,7 @@ class LandmarksController < ApplicationController
     
     # @landmark.figure_id = figure.id 
     # @landmark.save
-    
+    binding.pry 
   
     @landmark = Landmark.find(params[:id])
     @landmark.name = params['landmark']['name']
