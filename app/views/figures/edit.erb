@@ -19,7 +19,6 @@
   
   <h3>Landmarks:</h3>
      <% Landmark.all.each do |landmark|%>
-     <%binding.pry%>
      <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%= landmark.id %>" value="<%=landmark.id%>"<%='checked' if @figure.landmarks.include?(landmark) %>><%=landmark.name%></input><br>
   <%end%>
   
